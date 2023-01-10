@@ -1,0 +1,1 @@
+cmd_Release/math.dylib := c++ -shared -Wl,-no_pie -Wl,-search_paths_first -mmacosx-version-min=10.13 -arch x86_64 -L./Release -install_name @rpath/math.dylib -stdlib=libc++  -o "Release/math.dylib" ./Release/obj.target/math/math.o 
