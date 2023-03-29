@@ -1,5 +1,5 @@
-const a = [1,2,3];
-const b = [1,2,3];
-const c = [a];
-const m = c.some(item => item.toString === a.toString);
-console.log(m)
+const m = [1,2,3,0,0];
+const n = [12,13];
+m.splice(3,2, ...n);
+console.log('m', m);
+

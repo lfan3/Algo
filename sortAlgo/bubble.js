@@ -3,6 +3,8 @@ const swap = require("./lib/swap");
 // increase order
 function bubbleSort(arr){
   for(let i=0;i<arr.length-1; i++){
+    console.log('std', i)
+    
     for(let j=0; j<arr.length-1; j++){
       if(arr[j] > arr[j+1]){
         swap(arr, j,j+1);
@@ -14,6 +16,7 @@ function bubbleSort(arr){
 // optimize to reduce the inutil loop interation
 function bubbleSortOp(arr){
   for(let i=0;i<arr.length-1; i++){
+    console.log('op', i)
     let swapped = false;
     for(let j=0; j<arr.length-1; j++){
       if(arr[j] > arr[j+1]){
@@ -26,8 +29,8 @@ function bubbleSortOp(arr){
   return arr;
 }
 
-const a = [8,3,5,0,1,2,7];
-const c = [8,3,5,0,1,2,7];
+const a = [8,0,3,5,7];
+const c = [8,0,3,5,7];
 const b = bubbleSort(a);
 const b1 = bubbleSortOp(c);
 // console.log('b',b);

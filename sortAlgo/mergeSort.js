@@ -44,24 +44,7 @@ const mergeSort = (array)=>{
     return sort(array);
 }
 
-function divide(arr){
-  const len = arr.length;
-  console.log('arr', arr);
-  
-  if(len ===1)
-    return arr;
-    
-  const mid = Math.floor(len/2);
-  const leftArr = arr.slice(0, mid);
-  const rightArr = arr.slice(mid, len);
-  console.log("leftArr", leftArr, "rightArr", rightArr);
-  // conquer: if not reached the base case, sort the array
-  const l = divide(leftArr);
-  const r = divide(rightArr);
-  // reach the base case here
-  console.log(`l=>${l}, r=>${r}`);
-  return merge(l, r);
-}
+
 
 // la and ra are already sorted array
 function merge(la, ra){

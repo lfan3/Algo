@@ -1,4 +1,44 @@
 const swap = require('./lib/swap');
+// 3/7
+// resume:
+// a number is considered as sorted if all the numbers before it are smaller than it and all the number after it are larger
+// divided and conquor algorime, break problem into subproblem and combine the solution 
+// time:best: O(nlogn) worst: O(n^2)
+// space: best logn, worst: n
+// sorted array is the worst case --solution: always selected middle element as pivot or selected random position number
+// selected left most position is bad can get worst case
+function qs(arr){
+  const partition = (l, r)=>{
+    const pivot = arr[l];
+    const pivotIndex = l;
+    while(l<=r){
+      if(arr[l] > pivot && arr[r] < pivot && l<r){
+        swap(arr, l, r);
+      }
+      if(arr[l] <= pivot && l<=r){
+        l++
+      }
+      if(arr[r] > pivot && l<=r){
+        r--
+      }
+    }
+    swap(arr, pivotIndex, r);
+    return r;
+  }
+  const divide = (l, h)=>{
+    if(l < h){
+      const pos = partition(l, h);
+      divide(0, pos-1);
+      divide(pos+1, h);
+    }
+  }
+  divide(0, arr.length-1 )
+  return arr;
+}
+const a = [11,5,12,10,7,9];
+const b = [10,8,7,6,13,5,12];
+console.log(qs(b));
+
 // use the left one as pivot
 const quickSort = (array)=>{
     const partition = (l, r)=>{
@@ -119,9 +159,8 @@ function quickSortBoth(arr){
   return sort(0, arr.length -1);
 }
 
-const a = [11,5,12,10,7,9];
-const b = [10,8,7,6,13,5,12];
-// const m = quickSort2(b);
-const n = quickSortBoth(b);
 
-console.log(n);
+// const m = quickSort2(b);
+// const n = quickSortBoth(b);
+
+// console.log(n);

@@ -1,0 +1,3 @@
+const {geneList} = require('./lib');
+
+
