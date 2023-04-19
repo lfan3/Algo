@@ -1,3 +1,6 @@
-const a = 'abcde';
-
-console.log(a.substring(1, a.length-1))
+const a = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+const k = ["1","2"]
+const m = a.map(k=>k.toString());
+const n = Number(m.join(""))
+const c = Number(k.join(""))
+console.log("m",c, n)

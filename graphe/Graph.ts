@@ -76,6 +76,22 @@ class Graph {
     }
     return this.visited;
   }
+  dfs(node:NodeId){
+    if(this.visited.indexOf(node) !== -1) return;
+    if(!this.adjacencyList[node].length) return;
+    
+    this.visited.push(node);
+    const list = this.adjacencyList[node];
+    for(let item of list){
+      this.dfs(item);
+    }
+    return this.visited;
+  }
+  
+  
+  getAdjl(){
+    return this.adjacencyList;
+  }
 }
 
 function main(){
@@ -92,8 +108,10 @@ function main(){
   
   // graph.removeEdge(1,2)
   // graph.removeVertex(3)
-  const g = graph.bfs();
-  console.log('g', g)
+  // const g = graph.bfs();
+  const g = graph.getAdjl();
+  const m = graph.dfs(1)
+  console.log('g', m)
 }
 
 main();

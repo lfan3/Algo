@@ -1,5 +1,3 @@
-const m = [1,2,3,0,0];
-const n = [12,13];
-m.splice(3,2, ...n);
+const m = [ undefined, [2,2,2,2,null,2], [2,2,2,null,2,null,2] ] 
+m.shift()
 console.log('m', m);
-

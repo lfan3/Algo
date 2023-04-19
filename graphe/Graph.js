@@ -45,6 +45,8 @@ var Graph = /** @class */ (function () {
         }
     };
     ;
+    // recheck
+    //easy to mistake: the moment to push this.queue and this.visited
     Graph.prototype.bfs = function () {
         var nodes = Object.keys(this.adjacencyList);
         this.queue.push(+nodes[0]);
@@ -62,6 +64,24 @@ var Graph = /** @class */ (function () {
         }
         return this.visited;
     };
+    Graph.prototype.dfs = function (node) {
+        if (this.visited.indexOf(node) !== -1)
+            return;
+        if (!this.adjacencyList[node].length)
+            return;
+        var list = this.adjacencyList[node];
+        for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
+            var item = list_1[_i];
+            this.dfs(item);
+            this.visited.push(node);
+        }
+        return this.visited;
+    };
+    Graph.prototype.detectCycle = function (node) {
+    };
+    Graph.prototype.getAdjl = function () {
+        return this.adjacencyList;
+    };
     return Graph;
 }());
 function main() {
@@ -76,7 +96,9 @@ function main() {
     graph.addEdge(3, 4);
     // graph.removeEdge(1,2)
     // graph.removeVertex(3)
-    var g = graph.bfs();
-    console.log('g', g);
+    // const g = graph.bfs();
+    var g = graph.getAdjl();
+    var m = graph.dfs(1);
+    console.log('g', m);
 }
 main();
