@@ -1,8 +1,3 @@
-function fn() {
-  return (i)=>i;
-}
-
-const f1 = fn();
-const f2 = fn();
-
-console.log(f1 === f2);
+const v = 3;
+const distance = new Array(9).fill(0);
+console.log(distance);

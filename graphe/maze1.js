@@ -54,7 +54,5 @@ function findShortestPathBFS(grid, entry, dest){
       visited[rr][cc] = true;
       nodes_in_next_layer++;
     }
-  
   }
-  
 }
