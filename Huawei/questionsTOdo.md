@@ -23,25 +23,25 @@
 (1) NC52.括号序列 -- done
 (2) *leetcode 1614.括号的最大嵌套深度 --done
 5.排列组合(2题)
-(1) *leetcode 面试题08.08.有重复字符串的排列组合 --done
+(1) *leetcode 面试题08.08.有重复字符串的排列组合 --done  very good question， i made a optimized solution. try it again
 (2) leetcode 77.组合
 
 6.双指针(3题)
 (1) *leetcode 674.最长连续递增序列 
-(2) NC17.最长回文子串
+(2) NC17.最长回文子串 --- 经典题 结果还是不会。。。必要重做
 (3) NC28.最小覆盖子串
 
 7.深搜(1题) 
 (1) HJ41.称砝码 --- done 题非常好，重做集合
 
 8.二叉树(2题)
-(1) *leetcode 剑指offer 32 — II.从上到下打印二叉树 II 
-(2) leetcode 剑指offer 32 — III.从上到下打印二叉树 III
+(1) *leetcode 剑指offer 32 — II.从上到下打印二叉树 II  -- done
+(2) leetcode 剑指offer 32 — III.从上到下打印二叉树 III  -- done
 
 9.其他(6题)
 (1) *HJ108.求最小公倍数 -- done 考试数学最小公倍数和公约数。需要背
-(2) *HJ28.素数伴侣
+(2) *HJ28.素数伴侣  -- done 有很多知识点 集合在一起 挺难。可以重新做一下。
 (3) *HJ60.查找组成一个偶数最接近的两个素数 
-(4) *leetcode 994.腐烂的橘子
-(5) leetcode 204.计数质数
+(4) *leetcode 994.腐烂的橘子 -- done  bfs 很有趣。虽然思路都对 但是解答的时间太长
+(5) leetcode 204.计数质数 -- done 数学需要背诵
 (6) HJ25. 数据分类处理 -- done 并不难 只是题目难理解
