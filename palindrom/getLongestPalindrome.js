@@ -37,6 +37,10 @@ function longestPalindromeExpansion(arr){
   
 }
 
+function expansion(arr, center1, center2){
+  
+}
+
 const m = longestPalindromeDynamic("aabcdcbaa");
 console.log(m)
 // "abbba" -5
