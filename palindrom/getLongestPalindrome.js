@@ -5,6 +5,7 @@
  * 长度为1： dp[i][i] = true
  * 长度为2： dp[i][i+1] = (s[i] === s[i+1]) 
  * 长度为3： dp[i][j] = (s[i] === s[j]) ^ dp[i+1][j-1]
+ * 没有考虑S=“”的情况
  */
 function longestPalindromeDynamic( S ) {
   // write code here
@@ -34,13 +35,36 @@ function longestPalindromeDynamic( S ) {
  * 列举中心，中心可能是一个 也可能是两个
  */
 function longestPalindromeExpansion(arr){
-  
+  let max = 1;
+  for(let i=0; i<arr.length; i++){
+    // 中心是一个
+    const len1 = expansion(arr, i, i);
+    // 中心是两个
+    const len2 = expansion(arr, i, i+1);
+    const len = Math.max(len1, len2);
+    if(len > max){
+      max = len;
+    }
+  }
+  return max;
 }
 
 function expansion(arr, center1, center2){
-  
+  let left = center1;
+  let right = center2;
+
+  while(left>=0 && right<arr.length-1 && arr[left] === arr[right]){
+    left--;
+    right++;
+  }
+  return right-left+1;
 }
 
-const m = longestPalindromeDynamic("aabcdcbaa");
-console.log(m)
+console.time("dynamic")
+const m = longestPalindromeDynamic("");
+console.timeEnd("dynamic");
+console.time("expansion");
+const n = longestPalindromeExpansion("");
+console.timeEnd("expansion");
+console.log(m,n)
 // "abbba" -5

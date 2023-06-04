@@ -32,3 +32,4 @@ var countSubstrings = function(s) {
 
 const r = countSubstrings("abcc");
 console.log('r', r);
+
