@@ -35,13 +35,14 @@ function check(line) {
   return true;
 }
 
-const sp = /[a-z]/g;
-const up = /[A-Z]/g;
-const np = /[\d]/g;
-const ep2 = /[^[:alnum]]/g;
-const ep = /[^\w\d\s]/g;
-const repeat3 = /(.{3,}).*\1/
-const str = "021ABC9000";
-console.log(ep2.test(str), str.search(ep), str[0])
+// const sp = /[a-z]/g;
+// const up = /[A-Z]/g;
+// const np = /[\d]/g;
+// const ep2 = /[^[:alnum]]/g;
+// const ep = /[^\w\d\s]/g;
+// const repeat3 = /(.{3,}).*\1/
+// const str = "021ABC9000";
+// console.log(ep2.test(str), str.search(ep), str[0])
+
 
 
