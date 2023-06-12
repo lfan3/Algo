@@ -24,9 +24,10 @@ class UnionFind{
     find(x){
         let root = x;
         while(this.idArray[root] !== root){
-            root = this.idArray[x];
+            root = this.idArray[root];
         }
         while(x!==root){
+
             const next = this.idArray[x];
             this.idArray[x] = root;
             x = next;

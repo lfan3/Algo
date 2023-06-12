@@ -8,6 +8,7 @@ function accountsMerge(accounts){
     const result = [];
 
     for(let i=0; i<size; i++){
+
         const account = accounts[i];
         const len = account.length;
         for(let j=1; j<len; j++){
@@ -32,6 +33,7 @@ function accountsMerge(accounts){
 
     // arrange data
     for(let [accountIndex, emails] of accountToEmail.entries()){
+
         emails.sort();
         const account = accounts[accountIndex];
         const name = account[0];
@@ -41,5 +43,6 @@ function accountsMerge(accounts){
 }
 
 const accounts = [["John", "johnsmith@mail.com", "john00@mail.com"], ["John", "johnnybravo@mail.com"], ["John", "johnsmith@mail.com", "john_newyork@mail.com"], ["Mary", "mary@mail.com"]];
-const r = accountsMerge(accounts);
+const account = [["David","David0@m.co","David1@m.co"],["David","David3@m.co","David4@m.co"],["David","David4@m.co","David5@m.co"],["David","David2@m.co","David3@m.co"],["David","David1@m.co","David2@m.co"]]
+const r = accountsMerge(account);
 console.log("re", r)
