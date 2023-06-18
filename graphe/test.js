@@ -1,5 +1,8 @@
-const a = [1,2]
-let m = a[0]
-a[0] = 4
-m = 4
-console.log(a)
+const loop = (g, k)=>{
+  const n = g[k];
+  for(let i=0; i<n; i++){
+    if(loop(g, ))
+  }
+}
+
+const graph = [[1],[0]]
