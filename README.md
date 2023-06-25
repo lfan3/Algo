@@ -1,2 +1,2 @@
 # Algo
-Algo in With JS
+Algo With JS
