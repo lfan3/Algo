@@ -1,11 +1,5 @@
-
-let graph = [[1],[0]]
-let tmp = [[2],[1]]
-
-console.log("a",graph, tmp)
-
-const t = graph;
-graph = tmp;
-tmp = t
-
-console.log(graph, tmp, t)
+const a = [1,2]
+const c = [4,5]
+const b = []
+b.push(...a, ...c)
+console.log("b",b)
