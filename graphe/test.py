@@ -1,3 +1,5 @@
 c= [[0,1],[1,3],[2,3],[4,0],[4,5]]
-edges = {(a,b) for a, b in c}
-print(edges, type(edges))
+s = {(1,2), (2,3)}
+s.add((4,5))
+s.add((1,2))
+print(s)
